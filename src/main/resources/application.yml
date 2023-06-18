@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/quartz
+    username: root
+    password: Asdf1234!
+  quartz:
+    jdbc:
+      schema: quartz
+    scheduler-name: quartz-scheduler
+    properties:
+      org:
+        quartz:
+          jobStore:
+            isClustered: true
+            useProperties: true
+            tablePrefix: QRTZ_
+#            class: org.quartz.impl.jdbcjobstore.JobStoreCMT
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+          threadPool:
+            threadCount: 10
