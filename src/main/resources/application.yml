@@ -13,7 +13,7 @@ spring:
         quartz:
           jobStore:
             isClustered: true
-            useProperties: true
+            useProperties: false
             tablePrefix: QRTZ_
 #            class: org.quartz.impl.jdbcjobstore.JobStoreCMT
             driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate

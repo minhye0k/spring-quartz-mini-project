@@ -7,6 +7,6 @@ import org.springframework.scheduling.quartz.QuartzJobBean;
 public class FirstJob extends QuartzJobBean {
     @Override
     protected void executeInternal(JobExecutionContext context) throws JobExecutionException {
-
+        System.out.println("first job with cron trigger");
     }
 }
